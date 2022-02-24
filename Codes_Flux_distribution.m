@@ -45,8 +45,10 @@ load('flux_dia.mat')
 flux_dia(:,7)=mean(storedata.points,2);
 % save flux_dia flux_dia
 
-load('D:\Work\Diabetes_Beta_cell\Matlab\saturation_mean_flux\f_d_8_check.mat')
-flux_dia(:,8)=f_d_8_check(:,2);
+load('model_d_8.mat')
+storedata=gpSampler(model_d_8,130000);
+load('flux_dia.mat')
+flux_dia(:,8)=mean(storedata.points,2);
 % save flux_dia flux_dia
 
 load('model_d_9.mat')
@@ -72,8 +74,10 @@ load('flux_non_dia.mat')
 flux_non_dia(:,1)=mean(storedata.points,2);
 % save flux_non_dia flux_non_dia
 
-load('D:\Work\Diabetes_Beta_cell\Matlab\saturation_mean_flux\f_nd_2_check.mat')
-flux_non_dia(:,2)=f_nd_2_check(:,2);
+load('model_nd_2.mat')
+storedata=gpSampler(model_nd_2,130000);
+load('flux_non_dia.mat')
+flux_non_dia(:,2)=mean(storedata.points,2);
 % save flux_non_dia flux_non_dia
 
 load('model_nd_3.mat')
